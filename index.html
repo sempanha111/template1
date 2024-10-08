@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoinApex: The crypto trading platform trusted by millions</title>
+  <link rel="icon" href="./assets/images/favicon.ico" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/jquery-3.7.1.min.js"></script>
+  <script src="assets/tailwind.js"></script>
+  <link rel="stylesheet" href="./assets/index.css" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1211799346681320');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1211799346681320&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+
+</head>
+
+<body>
+  <div id="showloading" class=" h-screen w-full left-0 bg-[#adadadbe] top-0 fixed duration-1000 z-50">
+    <div class=' space-x-2 justify-center flex items-center mt-[20%]'>
+      <div class='h-8  w-8 bg-black rounded-full animate-bounce [animation-delay:0s]'></div>
+      <div class='h-8 w-8 bg-black rounded-full animate-bounce [animation-delay:-0.3s]'></div>
+      <div class='h-8 w-8 bg-black rounded-full animate-bounce'></div>
+    </div>
+  </div>
+
+  <header class=" bg-slate-950 relative  shadow-lg">
+    <div class="mx-2 sm:mx-20" id="header">
+      <div class=" flex items-center justify-between">
+        <div class="py-5   flex gap-10">
+          <a href="./index.html">
+            <h1 class="text-4xl font-medium text-white">CoinApex</h1>
+          </a>
+
+          <div
+            class="hidden lg:flex items-center gap-5 *:transition-all *:duration-300 *:text-2xl *:font-medium *:text-white">
+
+            <a href="#" class="hover:text-[#34C9A4]"> Buy Crypto </a>
+            <a href="#" class="hover:text-[#34C9A4]"> Price </a>
+            <a href="#" class="hover:text-[#34C9A4]"> Trade </a>
+            <a href="#" class="hover:text-[#34C9A4]"> Features </a>
+
+            <a href="#" class="hover:text-[#34C9A4] flex items-center gap-1">
+              <svg data-icon-id="icon-12px-New-daohangtiao-fill" data-icon-group="GateHeader" viewBox="0 0 12 12"
+                width="16px" height="16px" class="sc-3b0733ce-1 sc-3b0733ce-3 hIkSHe drSALU" style="display:block"
+                fill="none" color="currentColor" aria-hidden="true">
+                <g clip-path="url(#1258a4__a)">
+                  <path datafollowfill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6 0a6 6 0 1 0 6 6V2a2 2 0 0 0-2-2H6Zm1.314 8.727h1.432l.004-5.454H7.497v.909h-.001v2.755A15.563 15.563 0 0 0 6.6 5.271L5.347 3.273H3.75v5.454h1.253V7.084c0-.887-.018-1.656-.053-2.377l.027-.008c.294.64.69 1.341 1.048 1.925l1.289 2.103Z"
+                    fill="currentColor"></path>
+                </g>
+                <defs></defs>
+                <clipPath id="1258a4__a">
+                  <path d="M0 0h12v12H0z" fill="#fff"></path>
+                </clipPath>
+              </svg>Bots
+            </a>
+            <a href="#" class="hover:text-[#34C9A4] flex items-center gap-1">
+              <svg data-icon-id="icon-12px-Hot-daohangtiao-fill" data-icon-group="GateHeader" viewBox="0 0 12 12"
+                width="16px" height="16px" class="sc-3b0733ce-1 sc-3b0733ce-3 hIkSHe drSALU "
+                style="display:block;color:#17E3A0" fill="none" color="currentColor" aria-hidden="true">
+                <g clip-path="url(#12589f__a)">
+                  <mask id="12589f__b" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="12"
+                    height="13">
+                    <path d="M0 .017h12v12H0v-12Z" fill="#fff"></path>
+                  </mask>
+                  <g mask="url(#12589f__b)">
+                    <path datafollowfill="currentColor"
+                      d="M4.815.34c-.185.6-.686 1.68-2.044 3.112-2.355 2.474-2.666 6.46.945 8.42a.56.56 0 0 0 .73-.138c.615-.656.882-1.617.802-2.884-.022-.35.13-.44.432-.202.858.677 1.417 1.716 1.417 2.841 0 .382.15.583.497.515 2.304-.458 5.11-3.828 2.086-8.765-.182-.25-.446-.25-.446.093.006.424-.042.847-.14 1.258-.07.286-.335.283-.395 0C8.322 2.873 7.274 1.415 5.554.216c-.463-.325-.632-.229-.739.124Z"
+                      fill="currentColor"></path>
+                  </g>
+                </g>
+                <defs></defs>
+                <clipPath id="12589f__a">
+                  <path d="M0 0h12v12H0z" fill="#fff"></path>
+                </clipPath>
+              </svg>Copy
+            </a>
+            <a href="#" class="hover:text-[#34C9A4]"> Institutional </a>
+            <a href="#" class="hover:text-[#34C9A4] flex items-center gap-1">
+              <svg data-icon-id="icon-12px-Hot-daohangtiao-fill" data-icon-group="GateHeader" viewBox="0 0 12 12"
+                width="16px" height="16px" class="sc-3b0733ce-1 sc-3b0733ce-3 hIkSHe drSALU "
+                style="display:block;color:#17E3A0" fill="none" color="currentColor" aria-hidden="true">
+                <g clip-path="url(#12589f__a)">
+                  <mask id="12589f__b" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="12"
+                    height="13">
+                    <path d="M0 .017h12v12H0v-12Z" fill="#fff"></path>
+                  </mask>
+                  <g mask="url(#12589f__b)">
+                    <path datafollowfill="currentColor"
+                      d="M4.815.34c-.185.6-.686 1.68-2.044 3.112-2.355 2.474-2.666 6.46.945 8.42a.56.56 0 0 0 .73-.138c.615-.656.882-1.617.802-2.884-.022-.35.13-.44.432-.202.858.677 1.417 1.716 1.417 2.841 0 .382.15.583.497.515 2.304-.458 5.11-3.828 2.086-8.765-.182-.25-.446-.25-.446.093.006.424-.042.847-.14 1.258-.07.286-.335.283-.395 0C8.322 2.873 7.274 1.415 5.554.216c-.463-.325-.632-.229-.739.124Z"
+                      fill="currentColor"></path>
+                  </g>
+                </g>
+                <defs></defs>
+                <clipPath id="12589f__a">
+                  <path d="M0 0h12v12H0z" fill="#fff"></path>
+                </clipPath>
+              </svg>Launch
+            </a>
+
+            <a href="#" class="hover:text-[#34C9A4] flex items-center gap-1">
+              <img src="./assets/images/moment-header-live.gif" alt="">Moments
+            </a>
+
+
+
+
+
+
+          </div>
+
+
+        </div>
+
+        <div class="py-5 flex items-center gap-5 text-slate-700">
+
+
+          <button onclick="url()" class="py-3 hidden lg:block  text-white   text-2xl font-semibold   transition">
+            Sign Up</button>
+          <button onclick="url()"
+            class="py-3 px-10 hidden lg:block  text-white rounded-full text-2xl font-semibold bg-blue-600 hover:bg-slate-500 transition ">
+            Sign in</button>
+
+          <div class="text-white">|</div>
+
+          <div class=" cursor-pointer  ">
+            <i class="ri-global-line text-4xl text-white hover:text-blue-700 "></i>
+          </div>
+          <div class=" cursor-pointer  ">
+            <i class="ri-moon-fill text-4xl text-white hover:text-blue-700 "></i>
+          </div>
+          <div class=" cursor-pointer  ">
+            <i class="ri-search-line text-4xl text-white hover:text-blue-700 "></i>
+          </div>
+
+
+
+          <label class="burger mr-5 lg:hidden" id="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+
+        </div>
+      </div>
+
+
+
+
+      <div class="hidden" id="mobile">
+
+        <div class="p-5 flex flex-col  text-slate-500 *:text-2xl *:font-medium *:p-5">
+          <a href="#" class="hover:text-[#34C9A4]"> Buy Crypto </a>
+          <a href="#" class="hover:text-[#34C9A4]"> Markets </a>
+          <a href="#" class="hover:text-[#34C9A4]"> Trade </a>
+          <a href="#" class="hover:text-[#34C9A4]"> Derivatives </a>
+          <a href="#" class="hover:text-[#34C9A4]"> Earn </a>
+          <a href="#" class="hover:text-[#34C9A4]"> Institutional </a>
+          <a href="#" class="hover:text-[#34C9A4]"> More </a>
+          <div>
+            <button onclick="url()" class="py-3   text-white   text-2xl font-semibold   transition">
+              Sign Up</button>
+            <button onclick="url()"
+              class="py-3 px-10   text-white rounded-full text-2xl font-semibold bg-blue-600 hover:bg-slate-500 transition ">
+              Sign in</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+  </header>
+
+
+
+  <main class="custom">
+
+    <section class="relative">
+
+      <div class="Banner_headerContainer__1_zZv">
+
+
+        <video class="hidden md:block absolute w-full h-full object-cover -z-10 " autoplay loop muted>
+          <source src="./assets/images/090c38e6bdcf9f9ab8f85109a4df9c61c1b05703.mp4" type="video/mp4">
+        </video>
+        <div class="absolute w-full h-full object-cover -z-10 md:hidden">
+          <img class="w-full h-full" src="./assets/images/wctc_kv_bg.16c3b30e.webp" alt="">
+        </div>
+        <div class="container mx-auto max-w-screen-xl ">
+          <div class=" py-10 md:py-20">
+            <div class="md:*:mb-14 text-center md:text-start">
+              <img src="./assets/images/wctc_logo.d0839be1.webp" alt=""
+                class="max-w-[18rem] md:max-w-full mx-auto md:mx-0 mb-8">
+
+              <div class="mb-[25vh] *:mb-8 md:*:mb-8" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+                <div class="text-4xl md:text-6xl text-white font-bold">Charge Up for the Ultimate Competition!</div>
+                <div class="Banner_subTitle__zlOfP text-5xl md:text-7xl font-bold">$5,000,000 Max Prize</div>
+              </div>
+
+              <div class="*:mb-8">
+                <div class="text-gray-400 font-semibold text-2xl md:text-3xl">Official Competition Ends in</div>
+                <div class="flex items-center justify-center md:justify-start" data-aos="fade-up" data-aos-anchor-placement="top-center">
+
+                  <div
+                    class="flex justify-center items-center flex-col p-2 bg-[#253536]  rounded-xl w-[5rem] md:w-[6.5rem] h-[5rem] md:h-[6.5rem]">
+                    <div class="text-white text-4xl md:text-5xl font-bold">10</div>
+                    <div class="text-[#E6F14D] text-xl md:text-2xl font-normal">DAYS</div>
+                  </div>
+                  <div class="CountDown_colon__H_yuJ"><span></span><span></span></div>
+                  <div
+                    class="flex justify-center items-center flex-col p-2 bg-[#253536]  rounded-xl w-[5rem] md:w-[6.5rem] h-[5rem] md:h-[6.5rem]">
+                    <div class="text-white text-4xl md:text-5xl font-bold">10</div>
+                    <div class="text-[#E6F14D] text-xl md:text-2xl font-normal">HOURS</div>
+                  </div>
+                  <div class="CountDown_colon__H_yuJ"><span></span><span></span></div>
+                  <div
+                    class="flex justify-center items-center flex-col p-2 bg-[#253536]  rounded-xl w-[5rem] md:w-[6.5rem] h-[5rem] md:h-[6.5rem]">
+                    <div class="text-white text-4xl md:text-5xl font-bold">10</div>
+                    <div class="text-[#E6F14D] text-xl md:text-2xl font-normal">MIN</div>
+                  </div>
+                  <div class="CountDown_colon__H_yuJ"><span></span><span></span></div>
+                  <div
+                    class="flex justify-center items-center flex-col p-2 bg-[#253536]  rounded-xl w-[5rem] md:w-[6.5rem] h-[5rem] md:h-[6.5rem]">
+                    <div class="text-white text-4xl md:text-5xl font-bold">10</div>
+                    <div class="text-[#E6F14D] text-xl md:text-2xl font-normal">SEC</div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="flex justify-center md:justify-start">
+                <div data-aos="zoom-in-down"
+                  class="bg-[url('./assets/images/primary_btn_bg.50bdfc67.webp')] bg-center bg-contain bg-no-repeat w-[16rem] h-[8rem] md:w-[32rem] md:h-[20rem] flex items-center justify-center">
+                  <div class="text-2xl md:text-4xl font-bold text-slate-700">Team Registration</div>
+                </div>
+                <div data-aos="zoom-in"
+                  class="bg-[url('./assets/images/primary_btn_bg.50bdfc67.webp')] bg-center bg-contain bg-no-repeat w-[16rem] h-[8rem] md:w-[32rem] md:h-[20rem] flex items-center justify-center">
+                  <div class="text-2xl md:text-4xl font-bold text-slate-700">Team Registration</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black">
+      <div class="container mx-auto max-w-screen-xl">
+        <div class="py-10 md:py-20 box1 border border-[rgb(32,_128,_134)] rounded-3xl p-10 relative bg-[#0A110F]">
+
+          <h4 class="w-fit mx-auto mb-3 text-white md:hidden">Prize Pool</h4>
+
+          <div class="grid grid-cols-2 gap-5 mb-10 md:mb-20 ">
+            <div class="mx-auto">
+
+              <div class="flex items-center gap-2">
+                <img class="max-w-[4rem] md:max-w-full" src="./assets/images/prize_pool_person.9087c59b.webp" alt="">
+                <div class="grid gap-3">
+                  <div class="text-[#E7F24C] text-xl md:text-2xl font-medium">Number of Participants</div>
+                  <div class="text-white text-3xl md:text-6xl">81,645</div>
+                </div>
+              </div>
+
+
+            </div>
+            <div class=" mx-auto">
+              <div class="flex items-center gap-2">
+                <img class="max-w-[4rem] md:max-w-full" src="./assets/images/prize_pool_money.3ab2f2dd.webp" alt="">
+                <div class="grid gap-3">
+                  <div class="text-[#E7F24C] text-xl md:text-2xl font-medium">Current Prize Pool</div>
+                  <div class="text-white text-3xl md:text-6xl">$500,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-white py-3">
+              <div class="text-[1rem] md:text-2xl">0</div>
+
+
+              <div class="flex  text-white *:w-[20rem] max-w-full md:max-w-[85%] *:text-center font-semibold">
+                <div class="text-[1rem] md:text-2xl">3k</div>
+                <div class="text-[1rem] md:text-2xl">4k</div>
+                <div class="text-[1rem] md:text-2xl">6k</div>
+                <div class="text-[1rem] md:text-2xl">8k</div>
+                <div class="text-[1rem] md:text-2xl">10k</div>
+                <div class="text-[1rem] md:text-2xl">20k</div>
+                <div class="text-[1rem] md:text-2xl">30k</div>
+                <div class="relative  flex justify-center">
+
+                  <div class="absolute -bottom-1 flex-col items-center  flex mr-1">
+                    <span
+                      class="relative rounded-md z-10 p-1 md:p-3 text-xl md:text-2xl  text-white whitespace-no-wrap bg-[#F0FB4E] ">
+                      <div class="text-[1rem] md:text-2xl text-slate-800 flex items-center"><i
+                          class="ri-user-fill p-1 hidden md:block"></i>200K</div>
+                    </span>
+                    <div class="w-4 h-4 -mt-3 rotate-45 bg-[#F0FB4E]"></div>
+                  </div>
+
+                </div>
+                <div class="text-[1rem] md:text-2xl">100K</div>
+                <div class="text-[1rem] md:text-2xl">150K</div>
+                <div class="text-[1rem] md:text-2xl text-[#F0FB4E]"><i class="ri-user-fill p-1"></i>200K</div>
+
+
+              </div>
+
+            </div>
+
+
+            <div class="Progress_progress__xwDzI">
+              <div class="mantine-Progress-root">
+                <div class="mantine-Progress-bar" style="width: 80.7692%;">
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-between text-white py-3">
+              <div class="text-[1rem] md:text-2xl flex"><span class="text-[#F0FB4E]">$</span> 0</div>
+
+
+              <div class="flex  text-white *:w-[20rem] max-w-full md:max-w-[85%] *:text-center font-semibold">
+                <div class="text-[1rem] md:text-2xl">$ 80K</div>
+                <div class="text-[1rem] md:text-2xl">$ 90K</div>
+                <div class="text-[1rem] md:text-2xl">$ 100K</div>
+                <div class="text-[1rem] md:text-2xl">$ 120K</div>
+                <div class="text-[1rem] md:text-2xl">$ 140K</div>
+                <div class="text-[1rem] md:text-2xl">$ 200K</div>
+                <div class="text-[1rem] md:text-2xl">$ 300K</div>
+                <div class="relative  flex justify-center ">
+
+                  <div class="absolute top-1 flex-col items-center  flex mr-1">
+
+                    <span
+                      class="relative rounded-md z-10 p-1 md:p-3 text-[1rem] md:text-2xl  text-white whitespace-no-wrap bg-[#F0FB4E] ">
+                      <div class="text-[1rem] md:text-2xl text-slate-800 flex items-center"><i
+                          class="ri-user-fill p-1 hidden md:block"></i>200K</div>
+                    </span>
+                    <div class="w-4 h-4 -mt-[2.3rem] md:-mt-[4.4rem] rotate-45 bg-[#F0FB4E]  top-10"></div>
+                  </div>
+
+                </div>
+                <div class="text-[1rem] md:text-2xl">$ 1.2M</div>
+                <div class="text-[1rem] md:text-2xl">$ 3M</div>
+                <div class="text-[1rem] md:text-2xl text-[#F0FB4E]">$ 5M</div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="bg-black py-10 md:py-20 hidden md:block">
+      <div class="bg-[#0c201c]  ">
+        <div class="container mx-auto max-w-screen-xl">
+          <div class="Nav_navContainer__R8_XM">
+            <ul class="Nav_nav__DUkxc cf_main">
+              <li class="Nav_active__ZUuN3">
+                <img alt="tab decoration" class="Nav_bottomLeftDecoration__O7arF"
+                  src="./assets/images/tab-corner.f7580826.svg">
+                <img class="Nav_topRightDecoration__kHDXM" src="./assets/images/tab-corner.f7580826.svg">
+                <img class="Nav_bottomDecoration__g8ZV0" src="./assets/images/tab-bottom-corner.87e5f03f.svg">Home
+              </li>
+              <li class="">Team Competition</li>
+              <li class="">1v1 Battle Blitz</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="bg-black py-10 md:py-20">
+      <div class="container mx-auto max-w-screen-xl">
+        <div class="grid md:flex  items-center justify-center gap-5">
+          <div class="hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="41" viewBox="0 0 70 41" fill="none"
+              class="Title_left_icon__RL9Mp">
+              <path d="M65.7127 14.6055H22.5457L50.9987 26.3945L43.3087 18.1635H64.0727L65.7127 14.6055Z"
+                fill="#F0FB4E"></path>
+              <path d="M40.6268 23.6875L15.2778 14.6055H4.34278L40.6268 23.6875Z" fill="#F0FB4E"></path>
+            </svg>
+          </div>
+          <div class="md:hidden">
+            <img src="./assets/images/pk_title_top_decoration.5f69bf31.svg" alt="" class="mx-auto">
+          </div>
+          <div class="text-3xl text-center md:text-5xl font-bold text-white">Gift Bonanza, 100% Win Rate for $50 Futures
+            Voucher </div>
+          <div class="md:hidden">
+            <img src="./assets/images/pk_title_bottom_decoration.0c9280d3.svg" alt="" class="mx-auto">
+          </div>
+          <div class="hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="41" viewBox="0 0 70 41" fill="none"
+              class="Title_right_icon__7FoWA">
+              <path d="M4.28735 14.6055H47.4543L19.0014 26.3945L26.6914 18.1635H5.92734L4.28735 14.6055Z"
+                fill="#F0FB4E"></path>
+              <path d="M29.3733 23.6875L54.7223 14.6055H65.6573L29.3733 23.6875Z" fill="#F0FB4E"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="bg-black">
+      <div class="container mx-auto max-w-screen-xl">
+
+
+        <div
+          class="p-5 md:p-10  box1 border border-[rgb(32,_128,_134)] rounded-3xl  relative   h-[70rem] flex flex-col justify-between">
+          <img
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-auto h-full m-auto object-center object-cover rounded-3xl"
+            src="./assets/images/red_rain_envelope_bg.c746dfb9.webp" alt="">
+
+
+          <div
+            class="relative box2 border border-[#f0fb4e] rounded-xl bg-[#2d423c] h-[4.5rem] flex items-center w-full ml-2">
+
+
+            <div class="swiper z-50" id="swiper1">
+              <div class="swiper-wrapper ">
+                <div class="swiper-slide">
+                  <div class="text-slate-200 flex items-center gap-3 text-xl">Congratulations to <span
+                      class="text-[#CFDD4B]">币圈荒天帝</span> for winning <span><img class="max-w-[2rem]"
+                        src="./assets/images/SHIB.382d001f.webp" alt=""></span> <span>SHIB 20</span></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text-slate-200 flex items-center gap-3 text-xl">Congratulations to <span
+                      class="text-[#CFDD4B]">币圈荒天帝</span> for winning <span><img class="max-w-[2rem]"
+                        src="./assets/images/BABYDOGE.9631839e.webp" alt=""></span> <span>BABYDOGE 3000</span></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text-slate-200 flex items-center gap-3 text-xl">Congratulations to <span
+                      class="text-[#CFDD4B]">币圈荒天帝</span> for winning <span><img class="max-w-[2rem]"
+                        src="./assets/images/ExclusiveShards.bf6db3f0.webp" alt=""></span> <span>WCTC Exclusive
+                      Shard</span></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text-slate-200 flex items-center gap-3 text-xl">Congratulations to <span
+                      class="text-[#CFDD4B]">币圈荒天帝</span> for winning <span><img class="max-w-[2rem]"
+                        src="./assets/images/BTT.cb7c5659.webp" alt=""></span> <span>BTT 200</span></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text-slate-200 flex items-center gap-3 text-xl">Congratulations to <span
+                      class="text-[#CFDD4B]">币圈荒天帝</span> for winning <span><img class="max-w-[2rem]"
+                        src="./assets/images/SATS.287f02cf.webp" alt=""></span> <span>SATS 3200</span></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text-slate-200 flex items-center gap-3 text-xl">Congratulations to <span
+                      class="text-[#CFDD4B]">币圈荒天帝</span> for winning <span><img class="max-w-[2rem]"
+                        src="./assets/images/iphone_02.e5ffe9c8.webp" alt=""></span> <span>Iphone Shard 2</span></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text-slate-200 flex items-center gap-3 text-xl">Congratulations to <span
+                      class="text-[#CFDD4B]">币圈荒天帝</span> for winning <span><img class="max-w-[2rem]"
+                        src="./assets/images/CoffeeCup_01.7978e0f1.webp" alt=""></span> <span>Coffe Muc Shard 2</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text-slate-200 flex items-center gap-3 text-xl">Congratulations to <span
+                      class="text-[#CFDD4B]">币圈荒天帝</span> for winning <span><img class="max-w-[2rem]"
+                        src="./assets/images/Tshirt_01.1770acf0.webp" alt=""></span> <span>T-Shirt Shard 1</span></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="text-slate-200 flex items-center gap-3 text-xl">Congratulations to <span
+                      class="text-[#CFDD4B]">币圈荒天帝</span> for winning <span><img class="max-w-[2rem]"
+                        src="./assets/images/SATS.287f02cf.webp" alt=""></span> <span>SATS 3200</span></div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+          <div class="grid relative z-10 ">
+            <div class="grid grid-row-3 md:grid-cols-3 items-center ">
+
+              <div class="hidden md:flex gap-10 -translate-y-12 mx-auto ">
+                <div>
+                  <img class="max-w-[8rem] translate-y-8 mx-auto"
+                    src="./assets/images/action_winning_record.0d3dae9f.webp" alt="">
+                  <div class="button1   text-[1.4rem] md:py-2 px-3">Winning Record</div>
+                </div>
+                <div>
+                  <img class="max-w-[8rem] translate-y-8 mx-auto"
+                    src="./assets/images/action_shard_rewards.a95b204c.webp" alt="">
+                  <div class="button1   text-[1.4rem] md:py-2 px-3">Shard Bonus</div>
+                </div>
+
+              </div>
+
+              <div class="max-w-full cursor-pointer mx-auto order-first md:order-none mb-5 md:mb-0">
+                <div class="border rounded-full bg-[#eef943] px-4 py-2">
+                  <div class="flex items-center ">
+                    <img class="max-w-[6rem] -translate-y-3 " src="./assets/images/action_play.9593a0d3.webp" alt="">
+                    <div class="pr-10">
+                      <div class="text-4xl text-slate-800 font-semibold">Claim Now</div>
+                      <div class="text-2xl text-slate-700">Ticket: 0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-white font-semibold text-2xl md:hidden mx-auto py-5">More Tickets <i
+                  class="ri-arrow-right-s-line"></i></div>
+
+              <div class="flex gap-10 -translate-y-12 mx-auto">
+                <div>
+                  <img class="max-w-[8rem] translate-y-8 mx-auto" src="./assets/images/action_ranking.5ee928c8.webp"
+                    alt="">
+                  <div class="button1   text-[1.4rem] md:py-2 px-3">Leaderboard</div>
+                </div>
+                <div class="md:hidden">
+                  <img class=" max-w-[8rem] translate-y-8 mx-auto"
+                    src="./assets/images/action_shard_rewards.a95b204c.webp" alt="">
+                  <div class="button1   text-[1.4rem] md:py-2 px-3">Shard Bonus</div>
+                </div>
+                <div>
+                  <img class="max-w-[8rem] translate-y-8 mx-auto" src="./assets/images/action_get_chance.4d0a3c45.webp"
+                    alt="">
+                  <div class="button1   text-[1.4rem] md:py-2 px-3">More Tickets</div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="bg-black py-10 md:py-20">
+      <div class="container mx-auto max-w-screen-xl">
+        <div class="grid md:flex  items-center justify-center gap-5">
+          <div class="hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="41" viewBox="0 0 70 41" fill="none"
+              class="Title_left_icon__RL9Mp">
+              <path d="M65.7127 14.6055H22.5457L50.9987 26.3945L43.3087 18.1635H64.0727L65.7127 14.6055Z"
+                fill="#F0FB4E"></path>
+              <path d="M40.6268 23.6875L15.2778 14.6055H4.34278L40.6268 23.6875Z" fill="#F0FB4E"></path>
+            </svg>
+          </div>
+          <div class="md:hidden">
+            <img src="./assets/images/pk_title_top_decoration.5f69bf31.svg" alt="" class="mx-auto">
+          </div>
+          <div class="text-3xl text-center md:text-5xl font-bold text-white">Top 10 Teams</div>
+          <div class="md:hidden">
+            <img src="./assets/images/pk_title_bottom_decoration.0c9280d3.svg" alt="" class="mx-auto">
+          </div>
+          <div class="hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="41" viewBox="0 0 70 41" fill="none"
+              class="Title_right_icon__7FoWA">
+              <path d="M4.28735 14.6055H47.4543L19.0014 26.3945L26.6914 18.1635H5.92734L4.28735 14.6055Z"
+                fill="#F0FB4E"></path>
+              <path d="M29.3733 23.6875L54.7223 14.6055H65.6573L29.3733 23.6875Z" fill="#F0FB4E"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="w-fit mx-auto my-10">
+          <div class="flex gap-5">
+            <div class="button2   text-2xl md:text-3xl h-[4rem] w-[20rem] md:h-[6.5rem]  md:w-[30rem]">Team Return</div>
+            <div
+              class="button3  text-white text-2xl md:text-3xl h-[4rem] w-[20rem] md:h-[6.5rem]  md:w-[30rem] relative">
+              Team Trading Volume</div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-28 lg:gap-10 pt-20 lg:pt-32 ">
+          <div class=" relative h-[45rem] lg:h-[48rem] md:translate-y-20 w-full">
+            <img class="absolute top-0 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[8rem] "
+              src="./assets/images/rank2.d7ed0d21.svg" alt="">
+            <img class="absolute top-0 z-0 h-full left-1/2 -translate-x-1/2" src="./assets/images/top2.bd0abfd1.webp"
+              alt="">
+
+            <div class="relative z-10 w-fit mx-auto mt-28 lg:mt-32">
+              <img class="rounded-full h-[10rem] w-[10rem] border-2 border-[#208086]"
+                src="./assets/images/c12a601948053495196ac4c4d8d9c173e97cfba1.jpg" alt="">
+              <img class="absolute top-[70%] left-[70%] w-[4rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                alt="">
+            </div>
+            <div class="relative z-10 text-center mt-8">
+              <div class="text-4xl text-white ">币大师稳健持币</div>
+              <div class="text-2xl text-slate-400 pt-2">冠军战队，奖励多多</div>
+              <div class="text-[#F0FB4E] text-4xl lg:text-5xl pt-8">$411743.92</div>
+              <div class="text-slate-400 text-xl lg:text-2xl mt-2">Return</div>
+              <div class="text-[#F0FB4E] text-4xl lg:text-5xl pt-8">$6930.00</div>
+              <div class="text-slate-400 text-xl lg:text-2xl mt-2">Reward</div>
+            </div>
+          </div>
+          <div class=" relative h-[45rem] lg:h-[48rem] w-full order-first md:order-none" >
+            <img class="absolute top-0 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[12rem]"
+              src="./assets/images/rank1.6d77fa08.svg" alt="">
+            <img class="absolute top-0 z-0 h-full left-1/2 -translate-x-1/2" src="./assets/images/top1.3fc3dfe2.webp"
+              alt="">
+
+            <div class="relative z-10 w-fit mx-auto mt-28 lg:mt-32">
+              <img class="rounded-full h-[10rem] w-[10rem] border-2 border-[#BE9F61]"
+                src="./assets/images/3ae1d1219ad9390021d5b0e7500be9c8abfff0d4.png" alt="">
+              <img class="absolute top-[70%] left-[70%] w-[4rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                alt="">
+            </div>
+            <div class="relative z-10 text-center mt-8">
+              <div class="text-4xl text-white ">鸿儒战队</div>
+              <div class="text-2xl text-slate-400 pt-2">交易有鸿儒 往来无白丁</div>
+              <div class="text-[#F0FB4E] text-4xl lg:text-5xl pt-8">$1895966.91</div>
+              <div class="text-slate-400 text-xl lg:text-2xl mt-2">Return</div>
+              <div class="text-[#F0FB4E] text-4xl lg:text-5xl pt-8">$9702.00</div>
+              <div class="text-slate-400 text-xl lg:text-2xl mt-2">Reward</div>
+            </div>
+          </div>
+          <div class=" relative h-[45rem] lg:h-[48rem] md:translate-y-20 w-full">
+            <img class="absolute top-0 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[8rem]"
+              src="./assets/images/rank3.c90f47d9.svg" alt="">
+            <img class="absolute top-0 z-0 h-full left-1/2 -translate-x-1/2" src="./assets/images/top3.8d882c41.webp"
+              alt="">
+
+            <div class="relative z-10 w-fit mx-auto mt-28 lg:mt-32">
+              <img class="rounded-full h-[10rem] w-[10rem] border-2 border-[#206186]"
+                src="./assets/images/95e374074d1892502f316a3239f4ac610dc348ec.jpg" alt="">
+              <img class="absolute top-[70%] left-[70%] w-[4rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                alt="">
+            </div>
+            <div class="relative z-10 text-center mt-8">
+              <div class="text-4xl text-white ">幸福战队</div>
+              <div class="text-2xl text-slate-400 pt-2">实盘带单第一团队，合约赛必争第一！</div>
+              <div class="text-[#F0FB4E] text-4xl lg:text-5xl pt-8">$326149.49</div>
+              <div class="text-slate-400 text-xl lg:text-2xl mt-2">Return</div>
+              <div class="text-[#F0FB4E] text-4xl lg:text-5xl pt-8">$4158.00</div>
+              <div class="text-slate-400 text-xl lg:text-2xl mt-2">Reward</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-20 pt-10 lg:pt-36">
+          <div class="border rounded-3xl border-[rgb(32,_128,_134)] p-8 box2 relative">
+            <div
+              class=" w-fit  text-3xl text-gray-600 font-bold py-1 px-8 bg-[#eef943] rounded-tl-3xl rounded-br-3xl absolute top-0 left-0 italic">
+              4</div>
+            <div class="flex gap-10 items-center">
+
+              <div class="relative h-fit w-fit">
+                <img class="rounded-full h-[8rem] w-[8rem] border-2 border-[#208086]"
+                  src="./assets/images/f99abc0c412ed6242c8cde67e75cc6539aed84c1.png" alt="">
+                <img class="absolute top-[60%] left-[60%] w-[3rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                  alt="">
+              </div>
+
+
+              <div class="grid grid-cols-2  w-[70%] ">
+                <div class="col-span-2 ">
+                  <div class="text-3xl text-white">TEAM-KOREA</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">HUNTER</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$207267.96</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Return</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$207267.96</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Reward</div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="border rounded-3xl border-[rgb(32,_128,_134)] p-8 box2 relative">
+            <div
+              class=" w-fit  text-3xl text-gray-600 font-bold py-1 px-8 bg-[#eef943] rounded-tl-3xl rounded-br-3xl absolute top-0 left-0 italic">
+              5</div>
+            <div class="flex gap-10 items-center">
+
+              <div class="relative h-fit w-fit">
+                <img class="rounded-full h-[8rem] w-[8rem] border-2 border-[#208086]"
+                  src="./assets/images/6ea0350b58bef7b2be113cec8f09af0659bf6dba.png" alt="">
+                <img class="absolute top-[60%] left-[60%] w-[3rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                  alt="">
+              </div>
+
+
+              <div class="grid grid-cols-2  w-[70%] ">
+                <div class="col-span-2 ">
+                  <div class="text-3xl text-white">肥宅比特币</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">强强联手，送现金奖励，合约体验金，VIP3福利和startup空投</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$189512.22</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Return</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$990.00</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Reward</div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="border rounded-3xl border-[rgb(32,_128,_134)] p-8 box2 relative">
+            <div
+              class=" w-fit  text-3xl text-gray-600 font-bold py-1 px-8 bg-[#eef943] rounded-tl-3xl rounded-br-3xl absolute top-0 left-0 italic">
+              6</div>
+            <div class="flex gap-10 items-center">
+
+              <div class="relative h-fit w-fit">
+                <img class="rounded-full h-[8rem] w-[8rem] border-2 border-[#208086]"
+                  src="./assets/images/a59db1f9dda77813e260aa3a27838a4438e5c14f.png" alt="">
+                <img class="absolute top-[60%] left-[60%] w-[3rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                  alt="">
+              </div>
+
+
+              <div class="grid grid-cols-2  w-[70%] ">
+                <div class="col-span-2 ">
+                  <div class="text-3xl text-white">老秋量化</div>
+                  <div class="opacity-0"> h</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$181607.15</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Return</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$990.00</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Reward</div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="border rounded-3xl border-[rgb(32,_128,_134)] p-8 box2 relative">
+            <div
+              class=" w-fit  text-3xl text-gray-600 font-bold py-1 px-8 bg-[#eef943] rounded-tl-3xl rounded-br-3xl absolute top-0 left-0 italic">
+              7</div>
+            <div class="flex gap-10 items-center">
+
+              <div class="relative h-fit w-fit">
+                <img class="rounded-full h-[8rem] w-[8rem] border-2 border-[#208086]"
+                  src="./assets/images/daead2ff09b7969a7d25a9c1d5771e201e8a6443.png" alt="">
+                <img class="absolute top-[60%] left-[60%] w-[3rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                  alt="">
+              </div>
+
+
+              <div class="grid grid-cols-2  w-[70%] ">
+                <div class="col-span-2 ">
+                  <div class="text-3xl text-white">比特一哥</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">散户大家庭</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$177828.33</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Return</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$990.00</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Reward</div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="border rounded-3xl border-[rgb(32,_128,_134)] p-8 box2 relative">
+            <div
+              class=" w-fit  text-3xl text-gray-600 font-bold py-1 px-8 bg-[#eef943] rounded-tl-3xl rounded-br-3xl absolute top-0 left-0 italic">
+              8</div>
+            <div class="flex gap-10 items-center">
+
+              <div class="relative h-fit w-fit">
+                <img class="rounded-full h-[8rem] w-[8rem] border-2 border-[#208086]"
+                  src="./assets/images/a59db1f9dda77813e260aa3a27838a4438e5c14f.png" alt="">
+                <img class="absolute top-[60%] left-[60%] w-[3rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                  alt="">
+              </div>
+
+
+              <div class="grid grid-cols-2  w-[70%] ">
+                <div class="col-span-2 ">
+                  <div class="text-3xl text-white">强强联手</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">加入强强联手，送VIP以及各大周边奖品！芝麻各大主播联合创建！持续带单中！</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$139675.04</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Return</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$990.00</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Reward</div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="border rounded-3xl border-[rgb(32,_128,_134)] p-8 box2 relative">
+            <div
+              class=" w-fit  text-3xl text-gray-600 font-bold py-1 px-8 bg-[#eef943] rounded-tl-3xl rounded-br-3xl absolute top-0 left-0 italic">
+              9</div>
+            <div class="flex gap-10 items-center">
+
+              <div class="relative h-fit w-fit">
+                <img class="rounded-full h-[8rem] w-[8rem] border-2 border-[#208086]"
+                  src="./assets/images/a59db1f9dda77813e260aa3a27838a4438e5c14f.png" alt="">
+                <img class="absolute top-[60%] left-[60%] w-[3rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                  alt="">
+              </div>
+
+
+              <div class="grid grid-cols-2  w-[70%] ">
+                <div class="col-span-2 ">
+                  <div class="text-3xl text-white">诗和远方</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">一个有温度、能搞钱的战队</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$137433.55</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Return</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$990.00</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Reward</div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="border rounded-3xl border-[rgb(32,_128,_134)] p-8 box2 relative">
+            <div
+              class=" w-fit  text-3xl text-gray-600 font-bold py-1 px-8 bg-[#eef943] rounded-tl-3xl rounded-br-3xl absolute top-0 left-0 italic">
+              10</div>
+            <div class="flex gap-10 items-center">
+
+              <div class="relative h-fit w-fit">
+                <img class="rounded-full h-[8rem] w-[8rem] border-2 border-[#208086]"
+                  src="./assets/images/782095c4e93e774f3d70aea1e1f13dd98908603e.png" alt="">
+                <img class="absolute top-[60%] left-[60%] w-[3rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                  alt="">
+              </div>
+
+
+              <div class="grid grid-cols-2  w-[70%] ">
+                <div class="col-span-2 ">
+                  <div class="text-3xl text-white">Decent Fellows</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-0">加</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$124181.03</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Return</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$990.00</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Reward</div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+
+    <section class="bg-black py-10 md:py-20">
+      <div class="container mx-auto max-w-screen-xl">
+        <div class="grid md:flex  items-center justify-center gap-5">
+          <div class="hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="41" viewBox="0 0 70 41" fill="none"
+              class="Title_left_icon__RL9Mp">
+              <path d="M65.7127 14.6055H22.5457L50.9987 26.3945L43.3087 18.1635H64.0727L65.7127 14.6055Z"
+                fill="#F0FB4E"></path>
+              <path d="M40.6268 23.6875L15.2778 14.6055H4.34278L40.6268 23.6875Z" fill="#F0FB4E"></path>
+            </svg>
+          </div>
+          <div class="md:hidden">
+            <img src="./assets/images/pk_title_top_decoration.5f69bf31.svg" alt="" class="mx-auto">
+          </div>
+          <div class="text-3xl text-center md:text-5xl font-bold text-white">Top 10 Individuals</div>
+          <div class="md:hidden">
+            <img src="./assets/images/pk_title_bottom_decoration.0c9280d3.svg" alt="" class="mx-auto">
+          </div>
+          <div class="hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="41" viewBox="0 0 70 41" fill="none"
+              class="Title_right_icon__7FoWA">
+              <path d="M4.28735 14.6055H47.4543L19.0014 26.3945L26.6914 18.1635H5.92734L4.28735 14.6055Z"
+                fill="#F0FB4E"></path>
+              <path d="M29.3733 23.6875L54.7223 14.6055H65.6573L29.3733 23.6875Z" fill="#F0FB4E"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="w-fit mx-auto my-10">
+          <div class="flex gap-5">
+            <div class="button2   text-2xl md:text-3xl h-[4rem] w-[20rem] md:h-[6.5rem]  md:w-[30rem]">Credits
+              Leaderboard</div>
+
+          </div>
+        </div>
+
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-28 lg:gap-10 pt-20 lg:pt-32 ">
+          <div class=" relative h-[45rem] lg:h-[48rem] md:translate-y-20 w-full">
+            <img class="absolute top-0 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[8rem] "
+              src="./assets/images/rank2.d7ed0d21.svg" alt="">
+            <img class="absolute top-0 z-0 h-full left-1/2 -translate-x-1/2" src="./assets/images/top2.bd0abfd1.webp"
+              alt="">
+
+            <div class="relative z-10 w-fit mx-auto mt-28 lg:mt-32">
+              <img class="rounded-full h-[10rem] w-[10rem] border-2 border-[#208086]"
+                src="./assets/images/7ebe34a0f0c17a313b15c5f8a3bfc1e2c7d99072.png" alt="">
+              <img class="absolute top-[70%] left-[70%] w-[4rem]" src="./assets/images/top_10_individual.3705e873.webp"
+                alt="">
+            </div>
+            <div class="relative z-10 text-center mt-8">
+              <div class="text-4xl text-white ">江月待何人</div>
+              <div class="text-[#F0FB4E] text-4xl lg:text-5xl pt-8">31135</div>
+              <div class="text-slate-400 text-xl lg:text-2xl mt-2">Credit</div>
+              <div class="text-[#F0FB4E] text-4xl lg:text-5xl pt-8">$6930.00</div>
+              <div class="text-slate-400 text-xl lg:text-2xl mt-2">Reward</div>
+            </div>
+          </div>
+          <div class=" relative h-[45rem] lg:h-[48rem] w-full order-first md:order-none">
+            <img class="absolute top-0 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[12rem]"
+              src="./assets/images/rank1.6d77fa08.svg" alt="">
+            <img class="absolute top-0 z-0 h-full left-1/2 -translate-x-1/2" src="./assets/images/top1.3fc3dfe2.webp"
+              alt="">
+
+            <div class="relative z-10 w-fit mx-auto mt-28 lg:mt-32">
+              <img class="rounded-full h-[10rem] w-[10rem] border-2 border-[#BE9F61]"
+                src="./assets/images/06616c1646e0e560fcf287fb94667dba8e1387f2.png" alt="">
+              <img class="absolute top-[70%] left-[70%] w-[4rem]" src="./assets/images/top_10_individual.3705e873.webp"
+                alt="">
+            </div>
+            <div class="relative z-10 text-center mt-8">
+              <div class="text-4xl text-white ">活躍的FOMO達人</div>
+              <div class="text-[#F0FB4E] text-4xl lg:text-5xl pt-8">33420</div>
+              <div class="text-slate-400 text-xl lg:text-2xl mt-2">Credit</div>
+              <div class="text-[#F0FB4E] text-4xl lg:text-5xl pt-8">$9720.00</div>
+              <div class="text-slate-400 text-xl lg:text-2xl mt-2">Reward</div>
+            </div>
+          </div>
+          <div class=" relative h-[45rem] lg:h-[48rem] md:translate-y-20 w-full">
+            <img class="absolute top-0 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[8rem]"
+              src="./assets/images/rank3.c90f47d9.svg" alt="">
+            <img class="absolute top-0 z-0 h-full left-1/2 -translate-x-1/2" src="./assets/images/top3.8d882c41.webp"
+              alt="">
+
+            <div class="relative z-10 w-fit mx-auto mt-28 lg:mt-32">
+              <img class="rounded-full h-[10rem] w-[10rem] border-2 border-[#206186]"
+                src="./assets/images/e2c39a41059eb8caa0f0c807592d8aea725aee58.png" alt="">
+              <img class="absolute top-[70%] left-[70%] w-[4rem]" src="./assets/images/top_10_individual.3705e873.webp"
+                alt="">
+            </div>
+            <div class="relative z-10 text-center mt-8">
+              <div class="text-4xl text-white ">無所不能的潛力幣研究員</div>
+              <div class="text-[#F0FB4E] text-4xl lg:text-5xl pt-8">27730</div>
+              <div class="text-slate-400 text-xl lg:text-2xl mt-2">Credit</div>
+              <div class="text-[#F0FB4E] text-4xl lg:text-5xl pt-8">$3600.00</div>
+              <div class="text-slate-400 text-xl lg:text-2xl mt-2">Reward</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-20 pt-10 lg:pt-36">
+          <div class="border rounded-3xl border-[rgb(32,_128,_134)] p-8 box2 relative">
+            <div
+              class=" w-fit  text-3xl text-gray-600 font-bold py-1 px-8 bg-[#eef943] rounded-tl-3xl rounded-br-3xl absolute top-0 left-0 italic">
+              4</div>
+            <div class="flex gap-10 items-center">
+
+              <div class="relative h-fit w-fit">
+                <img class="rounded-full h-[8rem] w-[8rem] border-2 border-[#208086]"
+                  src="./assets/images/7ebe34a0f0c17a313b15c5f8a3bfc1e2c7d99072.png" alt="">
+                <img class="absolute top-[60%] left-[60%] w-[3rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                  alt="">
+              </div>
+
+
+              <div class="grid grid-cols-2  w-[70%] ">
+                <div class="col-span-2 ">
+                  <div class="text-3xl text-white">誇誇其談的幣圈小貔貅</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">22360</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Credit</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$514.28</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Reward</div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="border rounded-3xl border-[rgb(32,_128,_134)] p-8 box2 relative">
+            <div
+              class=" w-fit  text-3xl text-gray-600 font-bold py-1 px-8 bg-[#eef943] rounded-tl-3xl rounded-br-3xl absolute top-0 left-0 italic">
+              5</div>
+            <div class="flex gap-10 items-center">
+
+              <div class="relative h-fit w-fit">
+                <img class="rounded-full h-[8rem] w-[8rem] border-2 border-[#208086]"
+                  src="./assets/images/17bc5cfe2df8247c0d8049d3b82e57ced621c1a7.png" alt="">
+                <img class="absolute top-[60%] left-[60%] w-[3rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                  alt="">
+              </div>
+
+
+              <div class="grid grid-cols-2  w-[70%] ">
+                <div class="col-span-2 ">
+                  <div class="text-3xl text-white">神秘的狗頭軍師</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">21580</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Credit</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$514.28</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Reward</div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="border rounded-3xl border-[rgb(32,_128,_134)] p-8 box2 relative">
+            <div
+              class=" w-fit  text-3xl text-gray-600 font-bold py-1 px-8 bg-[#eef943] rounded-tl-3xl rounded-br-3xl absolute top-0 left-0 italic">
+              6</div>
+            <div class="flex gap-10 items-center">
+
+              <div class="relative h-fit w-fit">
+                <img class="rounded-full h-[8rem] w-[8rem] border-2 border-[#208086]"
+                  src="./assets/images/462cc18a3675c36a87e3c74685fb93ab04e5ae7b.png" alt="">
+                <img class="absolute top-[60%] left-[60%] w-[3rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                  alt="">
+              </div>
+
+
+              <div class="grid grid-cols-2  w-[70%] ">
+                <div class="col-span-2 ">
+                  <div class="text-3xl text-white">拒絕躺平的幣價預言家</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">18845</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Credit</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$514.28</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Reward</div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="border rounded-3xl border-[rgb(32,_128,_134)] p-8 box2 relative">
+            <div
+              class=" w-fit  text-3xl text-gray-600 font-bold py-1 px-8 bg-[#eef943] rounded-tl-3xl rounded-br-3xl absolute top-0 left-0 italic">
+              7</div>
+            <div class="flex gap-10 items-center">
+
+              <div class="relative h-fit w-fit">
+                <img class="rounded-full h-[8rem] w-[8rem] border-2 border-[#208086]"
+                  src="./assets/images/17bc5cfe2df8247c0d8049d3b82e57ced621c1a7.png" alt="">
+                <img class="absolute top-[60%] left-[60%] w-[3rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                  alt="">
+              </div>
+
+
+              <div class="grid grid-cols-2  w-[70%] ">
+                <div class="col-span-2 ">
+                  <div class="text-3xl text-white">雄心壯志的區塊鏈先驅</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">21095</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Credit</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$514.28</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Reward</div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="border rounded-3xl border-[rgb(32,_128,_134)] p-8 box2 relative">
+            <div
+              class=" w-fit  text-3xl text-gray-600 font-bold py-1 px-8 bg-[#eef943] rounded-tl-3xl rounded-br-3xl absolute top-0 left-0 italic">
+              8</div>
+            <div class="flex gap-10 items-center">
+
+              <div class="relative h-fit w-fit">
+                <img class="rounded-full h-[8rem] w-[8rem] border-2 border-[#208086]"
+                  src="./assets/images/ae246de046506c99eff8ee7e221ff78be5e74ea2.png" alt="">
+                <img class="absolute top-[60%] left-[60%] w-[3rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                  alt="">
+              </div>
+
+
+              <div class="grid grid-cols-2  w-[70%] ">
+                <div class="col-span-2 ">
+                  <div class="text-3xl text-white">勤勞的幣價預言家_624818</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">20160</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Credit</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$514.28</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Reward</div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="border rounded-3xl border-[rgb(32,_128,_134)] p-8 box2 relative">
+            <div
+              class=" w-fit  text-3xl text-gray-600 font-bold py-1 px-8 bg-[#eef943] rounded-tl-3xl rounded-br-3xl absolute top-0 left-0 italic">
+              9</div>
+            <div class="flex gap-10 items-center">
+
+              <div class="relative h-fit w-fit">
+                <img class="rounded-full h-[8rem] w-[8rem] border-2 border-[#208086]"
+                  src="./assets/images/38b8916136b451858f0f72de31da8c6c3d5858f8.png" alt="">
+                <img class="absolute top-[60%] left-[60%] w-[3rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                  alt="">
+              </div>
+
+
+              <div class="grid grid-cols-2  w-[70%] ">
+                <div class="col-span-2 ">
+                  <div class="text-3xl text-white">snowdog</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">1680</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Credit</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$514.00</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Reward</div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="border rounded-3xl border-[rgb(32,_128,_134)] p-8 box2 relative">
+            <div
+              class=" w-fit  text-3xl text-gray-600 font-bold py-1 px-8 bg-[#eef943] rounded-tl-3xl rounded-br-3xl absolute top-0 left-0 italic">
+              10</div>
+            <div class="flex gap-10 items-center">
+
+              <div class="relative h-fit w-fit">
+                <img class="rounded-full h-[8rem] w-[8rem] border-2 border-[#208086]"
+                  src="./assets/images/5e700233672cec42bf6af0eb57767db94cf36605.png" alt="">
+                <img class="absolute top-[60%] left-[60%] w-[3rem]" src="./assets/images/top_10_team.d66bf0e9.webp"
+                  alt="">
+              </div>
+
+
+              <div class="grid grid-cols-2  w-[70%] ">
+                <div class="col-span-2 ">
+                  <div class="text-3xl text-white">熱忱的比特幣大神</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">16115</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Credit</div>
+                </div>
+
+
+                <div>
+                  <div class="text-[#F0FB4E] text-4xl font-medium mt-5">$514.48</div>
+                  <div class="text-2xl text-gray-400 font-medium opacity-95">Reward</div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </section>
+
+
+    <section class="bg-black py-10 md:py-20">
+      <div class="container mx-auto max-w-screen-xl">
+        <div class="grid md:flex  items-center justify-center gap-5">
+          <div class="hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="41" viewBox="0 0 70 41" fill="none"
+              class="Title_left_icon__RL9Mp">
+              <path d="M65.7127 14.6055H22.5457L50.9987 26.3945L43.3087 18.1635H64.0727L65.7127 14.6055Z"
+                fill="#F0FB4E"></path>
+              <path d="M40.6268 23.6875L15.2778 14.6055H4.34278L40.6268 23.6875Z" fill="#F0FB4E"></path>
+            </svg>
+          </div>
+          <div class="md:hidden">
+            <img src="./assets/images/pk_title_top_decoration.5f69bf31.svg" alt="" class="mx-auto">
+          </div>
+          <div class="text-3xl text-center md:text-5xl font-bold text-white">1v1 Battle Blitz</div>
+          <div class="md:hidden">
+            <img src="./assets/images/pk_title_bottom_decoration.0c9280d3.svg" alt="" class="mx-auto">
+          </div>
+          <div class="hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="41" viewBox="0 0 70 41" fill="none"
+              class="Title_right_icon__7FoWA">
+              <path d="M4.28735 14.6055H47.4543L19.0014 26.3945L26.6914 18.1635H5.92734L4.28735 14.6055Z"
+                fill="#F0FB4E"></path>
+              <path d="M29.3733 23.6875L54.7223 14.6055H65.6573L29.3733 23.6875Z" fill="#F0FB4E"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class=" bg-black py-10 sm:py-20">
+      <div class="container mx-auto max-w-screen-xl">
+        <div class="px-10 sm:px-16 py-4 box1 border border-[rgb(32,_128,_134)] rounded-3xl  relative bg-[#0A110F]">
+          <div class=" sm:h-[26rem] flex items-center relative ">
+            <div class="sm:w-[40vw] md:w-[50vw]">
+              <div class="text-4xl sm:text-6xl sm:font-bold text-[#F0FB4E] mb-5">1v1 Battle Blitz</div>
+              <div class="text-2xl text-white font-medium sm:text-4xl">Redeem rewards with credits, up to $1,500,000.
+              </div>
+            </div>
+            <div class="  sm:absolute sm:-translate-y-20 right-0">
+              <img class="max-w-[18rem] sm:max-w-[30rem] md:max-w-[40rem]" src="./assets/images/home_pk.485a9835.webp"
+                alt="">
+            </div>
+          </div>
+        </div>
+        <div
+          class="button4 flex items-center   text-[1.6rem]   h-[4rem] mt-10  justify-center mx-auto w-full md:w-[20rem]">
+          Go Now <i class="ri-arrow-right-line mt-2 ml-2"></i></div>
+      </div>
+    </section>
+
+
+    <section class="bg-black py-10 md:py-20">
+      <div class="container mx-auto max-w-screen-xl">
+        <div class="grid md:flex  items-center justify-center gap-5">
+          <div class="hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="41" viewBox="0 0 70 41" fill="none"
+              class="Title_left_icon__RL9Mp">
+              <path d="M65.7127 14.6055H22.5457L50.9987 26.3945L43.3087 18.1635H64.0727L65.7127 14.6055Z"
+                fill="#F0FB4E"></path>
+              <path d="M40.6268 23.6875L15.2778 14.6055H4.34278L40.6268 23.6875Z" fill="#F0FB4E"></path>
+            </svg>
+          </div>
+          <div class="md:hidden">
+            <img src="./assets/images/pk_title_top_decoration.5f69bf31.svg" alt="" class="mx-auto">
+          </div>
+          <div class="text-3xl text-center md:text-5xl font-bold text-white">$10,000 Futures Voucher + 80 Sets of Merch
+            Package</div>
+          <div class="md:hidden">
+            <img src="./assets/images/pk_title_bottom_decoration.0c9280d3.svg" alt="" class="mx-auto">
+          </div>
+          <div class="hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="41" viewBox="0 0 70 41" fill="none"
+              class="Title_right_icon__7FoWA">
+              <path d="M4.28735 14.6055H47.4543L19.0014 26.3945L26.6914 18.1635H5.92734L4.28735 14.6055Z"
+                fill="#F0FB4E"></path>
+              <path d="M29.3733 23.6875L54.7223 14.6055H65.6573L29.3733 23.6875Z" fill="#F0FB4E"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="w-fit mx-auto my-10">
+          <div class="flex gap-5">
+            <div class="button2  p-4  h-[6rem] w-[20rem] md:h-[7rem] md:w-[30rem] lg:h-[6.5rem]  lg:w-[38rem] flex-col">
+              <div class="text-2xl md:text-3xl ">1st Period</div>
+              <div class="text-xl md:text-2xl">2024-07-19 12:00:00 - 2024-07-19 14:00:00 UTC</div>
+            </div>
+            <div
+              class="button3 text-white p-4  h-[6rem] w-[20rem] md:h-[7rem] md:w-[30rem] lg:h-[6.5rem]  lg:w-[38rem] flex-col relative">
+              <div class="text-2xl md:text-3xl ">1st Period</div>
+              <div class="text-xl md:text-2xl">2024-07-19 12:00:00 - 2024-07-19 14:00:00 UTC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class=" bg-black">
+      <div class="container mx-auto max-w-screen-xl">
+
+
+        <div
+          class="px-10 sm:px-16 py-20 md:py-8 box1 border border-[rgb(32,_128,_134)] rounded-3xl  relative bg-[#0A110F]">
+
+          <div class="grid md:grid-cols-2 ">
+            <div class="grid  mx-auto">
+              <img
+                class="max-w-[22rem] md:max-w-[35rem] absolute md:block md:relative top-0 -translate-y-1/2 md:-translate-y-0"
+                src="./assets/images/live_coffee_cup.84c306f1.webp" alt="">
+              <div class="text-white text-2xl text-center">WCTC Commemorative Tumbler</div>
+            </div>
+            <div class="md:flex items-center mx-auto text-center gap-10">
+              <div class=" ">
+                <div class="text-[#F0FB4E] text-4xl font-semibold"> Winners</div>
+                <div class="flex flex-wrap gap-5 mt-5">
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                </div>
+              </div>
+              <div class="w-2 h-28 bg-[#526567] rounded-3xl hidden md:block"></div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div
+          class="px-10 sm:px-16 py-20 md:py-8 box1 border border-[rgb(32,_128,_134)] rounded-3xl  relative bg-[#0A110F] mt-32 md:mt-10">
+
+          <div class="grid md:grid-cols-2 ">
+            <div class="grid  mx-auto">
+              <img
+                class="max-w-[22rem] md:max-w-[35rem] absolute md:block md:relative top-0 -translate-y-1/2 md:-translate-y-0"
+                src="./assets/images/100bonus.2aba3545.webp" alt="">
+              <div class="text-white text-2xl text-center">$100 Futures Voucher</div>
+            </div>
+            <div class="md:flex items-center mx-auto text-center gap-10">
+              <div class=" ">
+                <div class="text-[#F0FB4E] text-4xl font-semibold"> Winners</div>
+                <div class="flex flex-wrap gap-5 mt-5">
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                </div>
+              </div>
+              <div class="w-2 h-28 bg-[#526567] rounded-3xl hidden md:block"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div
+          class="px-10 sm:px-16 py-20 md:py-8 box1 border border-[rgb(32,_128,_134)] rounded-3xl  relative bg-[#0A110F] mt-32 md:mt-10">
+
+          <div class="grid md:grid-cols-2 ">
+            <div class="grid  mx-auto">
+              <img
+                class="max-w-[22rem] md:max-w-[35rem] absolute md:block md:relative top-0 -translate-y-1/2 md:-translate-y-0"
+                src="./assets/images/live_t_shirt.4e7ebb76.webp" alt="">
+              <div class="text-white text-2xl text-center">WCTC Commemorative T-Shirt</div>
+            </div>
+            <div class="md:flex items-center mx-auto text-center gap-10">
+              <div class=" ">
+                <div class="text-[#F0FB4E] text-4xl font-semibold"> Winners</div>
+                <div class="flex flex-wrap gap-5 mt-5">
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                </div>
+              </div>
+              <div class="w-2 h-28 bg-[#526567] rounded-3xl hidden md:block"></div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div
+          class="px-10 sm:px-16 py-20 md:py-8 box1 border border-[rgb(32,_128,_134)] rounded-3xl  relative bg-[#0A110F] mt-32 md:mt-10">
+
+          <div class="grid md:grid-cols-2 ">
+            <div class="grid  mx-auto">
+              <img
+                class="max-w-[22rem] md:max-w-[35rem] absolute md:block md:relative top-0 -translate-y-1/2 md:-translate-y-0"
+                src="./assets/images/live_sweat_shirt.4d354ceb.webp" alt="">
+              <div class="text-white text-2xl text-center">WCTC Commemorative Hoodie</div>
+            </div>
+            <div class="md:flex items-center mx-auto text-center gap-10">
+              <div class=" ">
+                <div class="text-[#F0FB4E] text-4xl font-semibold"> Winners</div>
+                <div class="flex flex-wrap gap-5 mt-5">
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                  <div class="text-white text-2xl">37**614</div>
+                </div>
+              </div>
+              <div class="w-2 h-28 bg-[#526567] rounded-3xl hidden md:block"></div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div  class="button4 flex items-center   text-[1.6rem]   h-[4rem] mt-10  justify-center mx-auto w-full md:w-[20rem]">
+          Go to Live <i class="ri-arrow-right-line mt-2 ml-2"></i></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="bg-black py-10 md:py-20">
+      <div class="container mx-auto max-w-screen-xl">
+        <div class="grid md:flex  items-center justify-center gap-5">
+          <div class="hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="41" viewBox="0 0 70 41" fill="none" class="Title_left_icon__RL9Mp">
+              <path d="M65.7127 14.6055H22.5457L50.9987 26.3945L43.3087 18.1635H64.0727L65.7127 14.6055Z" fill="#F0FB4E"></path>
+              <path d="M40.6268 23.6875L15.2778 14.6055H4.34278L40.6268 23.6875Z" fill="#F0FB4E"></path>
+            </svg>
+          </div>
+          <div class="md:hidden">
+            <img src="./assets/images/pk_title_top_decoration.5f69bf31.svg" alt="" class="mx-auto">
+          </div>
+          <div class="text-3xl text-center md:text-5xl font-bold text-white">Strategic Support</div>
+          <div class="md:hidden">
+            <img src="./assets/images/pk_title_bottom_decoration.0c9280d3.svg" alt="" class="mx-auto">
+          </div>
+          <div class="hidden md:block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="41" viewBox="0 0 70 41" fill="none" class="Title_right_icon__7FoWA">
+              <path d="M4.28735 14.6055H47.4543L19.0014 26.3945L26.6914 18.1635H5.92734L4.28735 14.6055Z" fill="#F0FB4E"></path>
+              <path d="M29.3733 23.6875L54.7223 14.6055H65.6573L29.3733 23.6875Z" fill="#F0FB4E"></path>
+            </svg>
+          </div>
+        </div>
+
+
+        <div class="grid grid-cols-3 gap-5 md:gap-10 mt-10">
+            <div class="border  border-[rgb(32,_128,_134)] rounded-3xl bg1 py-6 md:py-10">
+              <img class="mx-auto" src="./assets/images/chain.8e15bc7a.webp" alt="">
+            </div>
+            <div class="border  border-[rgb(32,_128,_134)] rounded-3xl bg1 py-6 md:py-10">
+              <img class="mx-auto" src="./assets/images/ventures.bb5cd2e2.webp" alt="">
+            </div>
+            <div class="border  border-[rgb(32,_128,_134)] rounded-3xl bg1 py-6 md:py-10">
+              <img class="mx-auto" src="./assets/images/labs.1e3609e4.webp" alt="">
+            </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+
+
+  <footer class="pt-20  bg-[#0C0C0F] py-10 md:py-20 custom " id="footer">
+    <div class="container mx-auto max-w-screen-xl">
+
+
+     
+
+        <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 text-slate-500">
+          <div class="*:my-5">
+            <h3 class="text-slate-300">Features</h3>
+            <div class="*:my-2 flex flex-col">
+              <a href="" class=" text-whit text-2xl hover:text-[#9B6EF8]">NFT Marketplace</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Margin Trading</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Futures Trading</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">OTC Trading</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Institutions</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">API Trading</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Staking Rewards</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">All features</a>
+            </div>
+          </div>
+
+          <div class="*:my-5">
+            <h3 class="text-slate-300">Browse Prices</h3>
+            <div class="*:my-2 flex flex-col">
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Bitcoin Price</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Ethereum Price</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Dogecoin Price</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">XRP Price</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Cardano Prices</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Solana Price</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Litecoin Price</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">All crypto prices</a>
+            </div>
+          </div>
+
+          <div class="*:my-5">
+            <h3 class="text-slate-300">Buying Guides</h3>
+            <div class="*:my-2 flex flex-col">
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Buy Bitcoin</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Buy Ethereum</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Buy Dogecoin</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Buy XRP</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Buy Cardano</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Buy Solana</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Buy Litecoin</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">All crypto guides</a>
+            </div>
+          </div>
+
+          <div class="*:my-5">
+            <h3 class="text-slate-300">Company</h3>
+            <div class="*:my-2 flex flex-col">
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Kraken Security</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Kraken Careers</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Kraken Blog</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Press Room</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Affiliate Program</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Asset Listings</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Kraken Status</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Support Center</a>
+            </div>
+          </div>
+
+          <div class="*:my-5">
+            <h3 class="text-slate-300">Popular Markets
+            </h3>
+            <div class="*:my-2 flex flex-col">
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">BTC to USD</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">ETH to USD</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">DOGE to USD</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">XRP to USD</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">ADA to USD</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">SOL to USD</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">LTC to USD</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">All crypto markets</a>
+            </div>
+          </div>
+
+          <div class="*:my-5">
+            <h3 class="text-slate-300">Crypto Education</h3>
+            <div class="*:my-2 flex flex-col">
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">What is cryptocurrency?</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Types of cryptocurrency</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">What is a blockchain?</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">What is Bitcoin?</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">What is Ethereum?</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">What is an NFT?</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">What is a DAO?</a>
+              <a href="" class=" text-2xl hover:text-[#9B6EF8]">Learn crypto</a>
+            </div>
+          </div>
+        </div>
+
+
+
+      <hr class="border-t-[0.1px] opacity-10 mt-20 border-slate-800">
+      <div class="flex *:text-slate-700 flex-wrap *:text-xl gap-10 py-7">
+        <div>© 2011 - 2024 Payward, Inc.</div>
+        <div class="underline">Privacy Notice</div>
+        <div class="underline">Terms of Service</div>
+        <div class="underline">Cookie Settings</div>
+        <div class="underline">Disclosures</div>
+      </div>
+      <hr class="border-t-[0.1px] opacity-10  border-slate-800">
+
+
+      <div class="text-xl text-slate-700 py-10">These materials are for general information purposes only and are not
+        investment advice or a recommendation or solicitation to buy, sell, stake or hold any cryptoasset or to engage
+        in any specific trading strategy. Kraken does not and will not work to increase or decrease the price of any
+        particular cryptoasset it makes available. Some crypto products and markets are unregulated, and you may not be
+        protected by government compensation and/or regulatory protection schemes. The unpredictable nature of the
+        crypto-asset markets can lead to loss of funds. Tax may be payable on any return and/or on any increase in the
+        value of your cryptoassets and you should seek independent advice on your taxation position. Geographic
+        restrictions may apply.</div>
+
+
+    </div>
+
+  </footer>
+  <div id="backtotop"></div>
+
+  <script src="./assets/javascript.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+
+  </script>
+
+</body>
+
+</html>
